@@ -48,6 +48,16 @@ adicionar.addEventListener("click", (e) => {
     email: email.value,
     role: funcao.value,
   });
+  exibir.innerHTML += `
+    <tr>
+      <td>${users[users.length-1].nome}</td>
+      <td>${users[users.length-1].email}</td>
+      <td>${users[users.length-1].role}</td>
+      <td>
+        <button class ="btn btn-primary" onclick ="editarNome(this)">Editar</button>
+        <button class ="btn btn-danger" onclick="deletar(this.parentNode)">Deletar</button>
+      </td>
+    </tr>`;
   console.log(users);
   // console.log(nome.value)
 });
@@ -56,9 +66,9 @@ adicionar.addEventListener("click", (e) => {
 console.log(exibir);
 
 
-// function deletar(e) {
-//   e.parentElement.remove();
-// }
+function deletar(e) {
+  e.parentElement.remove();
+}
 
 // function editarNome(e) {
 //   e.parentElement[0].innerText = prompt("Digite um novo nome: ");
