@@ -54,7 +54,7 @@ adicionar.addEventListener("click", (e) => {
       <td>${users[users.length-1].email}</td>
       <td>${users[users.length-1].role}</td>
       <td>
-        <button class ="btn btn-primary" onclick ="editarNome(this)">Editar</button>
+        <a href="./usersEdit.html"><button class ="btn btn-primary" onclick ="editarNome(this)">Editar</button></a>
         <button class ="btn btn-danger" onclick="deletar(this.parentNode)">Deletar</button>
       </td>
     </tr>`;
@@ -70,7 +70,7 @@ function deletar(e) {
   e.parentElement.remove();
 }
 
-// function editarNome(e) {
-//   e.parentElement[0].innerText = prompt("Digite um novo nome: ");
-// }
+function editarNome(e) {
+  console.log(e);
+}
 
