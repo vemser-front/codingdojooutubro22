@@ -23,9 +23,16 @@ function adicionaUser() {
     }
   ];
 
-  users.map((user) => exibir.innerHTML += `<tr><td>${user.nome}</td><td>${user.email}</td><td>${user.role}</td></tr>`);
+  users.map((user) => exibir.innerHTML += `<tr><td>${user.nome}</td><td>${user.email}</td><td>${user.role}</td> <td><button class ="btn btn-primary" onclick ="editarNome(this)">Editar</button> <button class ="btn btn-danger" onclick="deletar(this.parentNode)">Deletar</button></td></tr>`);
   console.log(exibir)
 
-
-
 };
+
+function deletar(e) {
+  e.parentElement.remove()
+}
+
+function editarNome(e) {
+  e.parentElement[0].innerText = prompt("Digite um novo nome: ")
+}
+

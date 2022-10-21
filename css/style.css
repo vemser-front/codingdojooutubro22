@@ -1,0 +1,14 @@
+ul{
+    display: flex;
+    gap: 10px;
+}
+
+ul li{
+    color: white;
+    list-style: none;
+    cursor: pointer;
+}
+
+header{
+    margin-bottom: 40px;
+}
